@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Projeto Full-Stack com React, TypeScript e JSON Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto full-stack utilizando **React**, **TypeScript** e **JSON Server** para persistência de dados. A aplicação está configurada para rodar em dois terminais separados: um para o servidor do JSON Server e outro para o servidor de desenvolvimento do React.
 
-## Available Scripts
+## Pré-requisitos
 
-In the project directory, you can run:
+Certifique-se de que o **Node.js** está instalado na sua máquina. Você pode baixar a versão mais recente [aqui](https://nodejs.org/).
 
-### `npm start`
+### Passos para rodar o projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Clone o repositório** para sua máquina local:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+   ```bash
+   git clone <URL-do-repositório>
+   cd <diretório-do-projeto>
+   ```
 
-### `npm test`
+2. **Instale as dependências** do projeto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   No diretório raiz do projeto, execute o seguinte comando para instalar as dependências tanto do frontend quanto do backend:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Inicie o JSON Server**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Abra um terminal e execute o comando abaixo para rodar o servidor do JSON Server, que estará disponível em `http://localhost:3001/`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm run server
+   ```
 
-### `npm run eject`
+   Isso irá rodar o servidor em `http://localhost:3001/` e fornecer a API para a aplicação React.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. **Inicie o servidor de desenvolvimento React**:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   Abra um **segundo terminal** e execute o seguinte comando para iniciar o servidor de desenvolvimento do React, que estará disponível em `http://localhost:3000/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm start
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   Isso irá abrir a aplicação React no navegador em `http://localhost:3000/`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Scripts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm run server`: Inicia o **JSON Server** na porta `3001`.
+- `npm start`: Inicia o servidor de desenvolvimento do **React** na porta `3000`.
+
+## Estrutura do Projeto
+
+```
+/node_modules       # Dependências instaladas
+/public            # Arquivos públicos (index.html, etc.)
+/src               # Código fonte do projeto React
+  /components      # Componentes do React
+  /hooks           # Funções
+  /services        # Lógica de comunicação com o JSON Server
+/db.json           # Arquivo de dados do JSON Server
+/package.json      # Configurações do projeto
+```
+
+## Considerações
+
+- O JSON Server usa o arquivo `db.json` para armazenar dados. Certifique-se de adicionar ou modificar os dados diretamente nesse arquivo para simular um banco de dados.
+- Qualquer modificação no arquivo `db.json` pode exigir reiniciar o servidor do JSON Server para refletir as mudanças.
