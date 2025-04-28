@@ -1,7 +1,7 @@
 import './button.css';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'success' | 'danger';
+  variant?: 'success' | 'danger' | 'update';
   children: React.ReactNode;
 }
 

@@ -5,6 +5,9 @@
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
+  margin: 10px;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .success {
@@ -21,4 +24,12 @@
 
 .danger:hover {
   background-color: #c82333;
+}
+
+.update {
+  background-color: #2256ff;
+}
+
+.update:hover {
+  background-color: #2256ff;
 }

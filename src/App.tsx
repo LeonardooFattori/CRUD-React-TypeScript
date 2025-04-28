@@ -6,7 +6,7 @@ import { useHeroes } from "./hooks/useHeroes";
 import "../src/style.css";
 
 export default function App() {
-  const { heroes, createHero, deleteHero, loading, error } = useHeroes();
+  const { heroes, createHero, deleteHero, updateHero, loading, error } = useHeroes();
 
   return (
     <>
@@ -18,6 +18,7 @@ export default function App() {
           loading={loading}
           error={error}
           deleteHero={deleteHero}
+          updateHero={updateHero}
         />
       </div>
       <Footer />
